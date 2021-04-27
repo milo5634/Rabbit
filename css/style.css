@@ -1,0 +1,317 @@
+/**************************
+CSS COMMUN
+**************************/
+
+@font-face {
+    font-family: "Rabbit";
+    src: url("../fonts/QuentinPro.otf");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #444;
+    color: white;
+    font-family: "Open Sans", arial, sans-serif;
+    font-size: 1rem;
+    line-height: 2;
+    margin: 30px;
+}
+
+.container {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.orange {
+    color: #FF9D00;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Rabbit", arial, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+header,
+footer {
+    background: #444444;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+}
+
+
+/**************************
+CSS HEADER
+**************************/
+
+header {
+    padding: 25px;
+}
+
+header .flex-header {
+    /*conteneur flex*/
+    display: flex;
+    justify-content: space-between;
+}
+
+header img {
+    /*item*/
+    width: 250px;
+    margin-bottom: 25px;
+}
+
+header nav {
+    /*item*/
+    /*conteneur flex*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-family: "Rabbit", arial, sans-serif;
+    line-height: 1.5;
+}
+
+header nav a {
+    /*items*/
+    color: white;
+    font-size: 1.563rem;
+    margin: 10px;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: #FF9D00;
+}
+
+
+/**************************
+CSS MAIN INDEX
+**************************/
+
+main {
+    margin: 0 30px;
+}
+
+#index h1 span {
+    letter-spacing: 5px;
+    text-transform: none;
+}
+
+
+/*section clothing*/
+
+#clothing h2 {
+    border-left: 3px solid rgba(0, 0, 0, 0.075);
+    border-top: 3px solid rgba(0, 0, 0, 0.075);
+    font-size: 1.875rem;
+    letter-spacing: 1px;
+    margin: 50px 0 25px;
+    padding: 10px 30px;
+}
+
+#clothing .flex-article {
+    /*contenur flex*/
+    display: flex;
+    justify-content: space-between;
+}
+
+#clothing article {
+    /*items*/
+    background-color: white;
+    color: #666;
+    flex-basis: 23%;
+    margin-bottom: 35px;
+    padding: 20px;
+    text-align: center;
+}
+
+#clothing article img {
+    width: 100%;
+}
+
+#clothing h3 {
+    border-bottom: 2px solid #FF9D00;
+    color: #FF9D00;
+    font-weight: normal;
+    font-size: 1.563rem;
+    margin: 20px 0;
+}
+
+#clothing a {
+    background-color: #FF9D00;
+    color: #fff;
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    text-decoration: none;
+    width: 100%;
+}
+
+
+/*section media*/
+
+#media .flex-media {
+    /*conteneur flex*/
+    display: flex;
+    justify-content: space-between;
+}
+
+#media article {
+    /*item*/
+    padding-right: 25px;
+    text-align: left;
+    flex-basis: 50%;
+}
+
+#media .video {
+    /*item*/
+    flex-basis: 50%;
+}
+
+#media video {
+    width: 100%;
+}
+
+
+/*div maps*/
+
+#maps {
+    margin-top: 50px;
+}
+
+#maps iframe {
+    border: 0;
+    height: 450px;
+    width: 100%;
+}
+
+
+/**************************
+CSS MAIN CONTACT
+**************************/
+
+#contacter form {
+    border: 2px solid #ffb129;
+    border-radius: 5px;
+    margin: 25px auto 0;
+    padding: 20px;
+    width: 70%;
+}
+
+#contacter form label {
+    font-weight: bold;
+    display: block;
+}
+
+#contacter form input,
+#contacter form textarea {
+    border: 5px solid #ffb129;
+    border-radius: 5px;
+    margin: 10px 0;
+    outline: 0;
+    padding: 10px;
+    width: 100%;
+}
+
+#contacter form textarea {
+    height: 200px;
+    resize: none;
+}
+
+#contacter form .validation {
+    text-align: center;
+}
+
+#contacter form button {
+    background-color: #ffb129;
+    border: 0;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+
+/**************************
+CSS FOOTER
+**************************/
+
+footer {
+    color: rgba(255, 255, 255, 0.75);
+    margin-top: 50px;
+    padding: 50px;
+    text-align: center;
+}
+
+footer a {
+    /*tous les liens du footer y compris ceux de la nav*/
+    color: white;
+}
+
+footer img {
+    width: 50px;
+}
+
+
+/**************************
+CSS MEDIA QUERIES
+**************************/
+
+
+/*TABLET A partir de 1024px et inférieur*/
+
+@media screen and (max-width: 1024px) {
+    /*MAIN INDEX*/
+    /*Section clothing*/
+    #clothing .flex-article {
+        flex-wrap: wrap;
+        /*On force le retour à la ligne des items*/
+    }
+    #clothing article {
+        flex-basis: 48%;
+    }
+    /*Section media*/
+    #media .flex-media {
+        flex-direction: column;
+        /*On change de direction pour forcer les items à se placer les uns en dessous des autres*/
+    }
+}
+
+
+/*MOBILE A partir de 767px et inférieur*/
+
+@media screen and (max-width: 767px) {
+    /*HEADER*/
+    header .flex-header {
+        flex-direction: column;
+        /*On change de direction pour forcer les items à se placer les uns en dessous des autres*/
+        align-items: center;
+        /*on les force à se centrer*/
+    }
+    header nav {
+        align-items: center;
+        /*on force les items à se centrer*/
+    }
+    /*MAIN INDEX*/
+    /*Section clothing*/
+    #clothing article {
+        flex-basis: 100%;
+    }
+    /*Section media*/
+    #media video {
+        display: none;
+        /*on cache la vidéo dans la version mobile*/
+    }
+    /*MAIN CONTACT*/
+    #contacter form {
+        width: 100%;
+    }
+}
